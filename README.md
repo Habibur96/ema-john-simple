@@ -1,6 +1,9 @@
-#Ema-John-Simple
+# Ema-John-Simple
+# hr
+# Private Repo Link
+# hr
+## Click here to create private repo: https://venerable-bombolone-75b181.netlify.app/
 
-https://venerable-bombolone-75b181.netlify.app/
 
 ## Available Scripts
 
