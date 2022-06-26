@@ -29,7 +29,6 @@ const Product = ({ product, handleAddToCart }) => {
 
     if (product) {
 
-
         const { name, seller, price, ratings, img } = product;
         // console.log(product)
 
