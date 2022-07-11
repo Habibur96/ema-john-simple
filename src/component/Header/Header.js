@@ -17,7 +17,7 @@ const Header = () => {
                     <a href="/about">About</a> */}
 
                     <Link to='/'>Shop</Link>
-                    <Link to='/Order'>Orders</Link>
+                    <Link to='/Orders'>Orders</Link>
                     <Link to='/Inventory'>Inventory</Link>
                     <Link to='/About'>About</Link>
 

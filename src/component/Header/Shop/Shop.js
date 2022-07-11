@@ -5,38 +5,14 @@ import Cart from '../../Cart/Cart';
 import Product from '../../Product/Product';
 import './Shop.css'
 import { addToDb, getStoredCart } from '../../../utilities/fakedb';
+import useProducts from '../../../hooks/useProducts';
 //import { faOtter } from '@fortawesome/free-solid-svg-icons';
 
 const Shop = () => {
     console.log('products load before fetch  ')
-    const [products, setProducts] = useState([]);
+    const [products, setProducts] = useProducts([]);
+
     const [cart, setCart] = useState([]);
-    useEffect(() => {
-        fetch('products.json')
-            //fetch('https://product.free.beeceptor.com/')
-            .then(res => res.json())
-            .then(data => setProducts(data))
-    }, []);
-
-    useEffect(() => {
-        //  console.log('Local storage first line');
-        const storedCart = getStoredCart();
-        const savedCart = [];
-        // console.log(storedCart)
-        for (const id in storedCart) {
-            // console.log(id);
-            const addedProduct = products.find(product => product.id === id);
-            if (addedProduct) {
-                const quantity = storedCart[id];
-                addedProduct.quantity = quantity;
-                savedCart.push(addedProduct);
-                // console.log(addedProduct);
-            }
-
-        }
-        setCart(savedCart);
-
-    }, [products]);
 
     useEffect(() => {
         const storedCart = getStoredCart();
