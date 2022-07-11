@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from 'react';
 //import { addToDb } from '../../utilities/fakedb';
-import Cart from '../../Cart/Cart';
+
 
 import Product from '../../Product/Product';
 import './Shop.css'
 import { addToDb, getStoredCart } from '../../../utilities/fakedb';
 import useProducts from '../../../hooks/useProducts';
+import Cart from '../../Cart/Cart';
+import { Link } from 'react-router-dom'
+
+
 //import { faOtter } from '@fortawesome/free-solid-svg-icons';
 
 const Shop = () => {
@@ -55,7 +59,13 @@ const Shop = () => {
 
 
             <div className="cart-container">
-                <Cart cart={cart}></Cart>
+                <Cart cart={cart}>
+                    <Link to="/Orders">
+                        <button>Review Iteam</button>
+                    </Link>
+
+                </Cart>
+
             </div>
         </div>
     );
