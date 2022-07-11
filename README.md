@@ -1,6 +1,6 @@
 # Ema-John-Simple
 ## Repo Link
-## Click here to create private repo: https://venerable-bombolone-75b181.netlify.app/
+## https://venerable-bombolone-75b181.netlify.app/
 
 
 ## Available Scripts
