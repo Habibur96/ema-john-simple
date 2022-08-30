@@ -6,6 +6,7 @@ import Cart from '../Cart/Cart';
 import ReviewIteam from '../ReviewIteam/ReviewIteam';
 
 import { Link } from 'react-router-dom'
+import './Orders.css'
 
 
 const Orders = () => {
