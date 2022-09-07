@@ -7,7 +7,6 @@ const useCart = (products) => {
 
     const [cart, setCart] = useState([]);
 
-
     useEffect(() => {
         const storedCart = getStoredCart();
         const savedCart = [];
