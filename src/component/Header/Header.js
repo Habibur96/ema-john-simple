@@ -3,9 +3,16 @@ import logo from '../../images/Logo.svg'
 import './Header.css'
 
 import { Link } from "react-router-dom"
-
+import auth from '../../firebase.init';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { signOut } from 'firebase/auth';
 
 const Header = () => {
+    const [user] = useAuthState(auth);
+
+    const handleSignOut = () => {
+        signOut(auth);
+    }
     return (
         <div>
             <nav className='header'>
@@ -21,9 +28,14 @@ const Header = () => {
                     <Link to='/Inventory'>Inventory</Link>
                     <Link to='/About'>About</Link>
                     <Link to='/login'>Login</Link>
-                    <Link to='/SignUp'>Sign Up</Link>
+                    {
 
+                        user ?
 
+                            <button className='btn btn-link text-white text-decoration-none fs-3' onClick={handleSignOut} >Sign Out</button> :
+
+                            <Link to='/SignUp'>Sign Up</Link>
+                    }
 
                 </div>
 
