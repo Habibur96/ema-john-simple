@@ -1,6 +1,6 @@
 # Ema-John-Simple
 ## Repo Link
-## https://venerable-bombolone-75b181.netlify.app/
+## https://extraordinary-cactus-98cca4.netlify.app/
 
 
 ## Available Scripts
